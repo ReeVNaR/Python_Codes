@@ -12,3 +12,11 @@ print(fruits[-2])  # banana
 # Change an element
 fruits[1] = "blueberry"
 print(fruits)  # ['apple', 'blueberry', 'cherry']
+
+# Append (adds at end)
+fruits.append("mango")  
+
+# Insert at a specific index
+fruits.insert(1, "grape")
+
+print(fruits)  # ['apple', 'grape', 'blueberry', 'cherry', 'mango']
