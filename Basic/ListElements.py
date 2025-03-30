@@ -7,3 +7,8 @@ print(fruits[1])  # banana
 # Negative Indexing (Last element is -1)
 print(fruits[-1])  # cherry
 print(fruits[-2])  # banana
+
+
+# Change an element
+fruits[1] = "blueberry"
+print(fruits)  # ['apple', 'blueberry', 'cherry']
