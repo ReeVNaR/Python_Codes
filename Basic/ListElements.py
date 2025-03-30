@@ -20,3 +20,15 @@ fruits.append("mango")
 fruits.insert(1, "grape")
 
 print(fruits)  # ['apple', 'grape', 'blueberry', 'cherry', 'mango']
+
+
+# Remove by value
+fruits.remove("cherry")  
+
+# Remove last element
+fruits.pop()  
+
+# Remove by index
+del fruits[0]  
+
+print(fruits)  # ['grape', 'blueberry']
