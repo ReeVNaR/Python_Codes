@@ -5,3 +5,7 @@ print(nums)  # [1, 2, 4, 5, 8]
 
 nums.sort(reverse=True)  # Sort in descending order
 print(nums)  # [8, 5, 4, 2, 1]
+
+words = ["banana", "apple", "cherry"]
+words.sort(key=len)  
+print(words)  # ['apple', 'banana', 'cherry'] (Sorted by length)
