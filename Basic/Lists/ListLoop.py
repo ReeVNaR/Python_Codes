@@ -1,4 +1,4 @@
-colors = ["red", "green", "blue"]
+colors = ["red", "green", "blue","pink", "yellow"]
 
 # Using a for loop
 for color in colors:
