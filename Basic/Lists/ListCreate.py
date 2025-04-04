@@ -16,4 +16,4 @@ matrix = [
 ]
 
 # Accessing an element
-print(matrix[1][2])  # 6
+print(matrix[2][2])  # 6
