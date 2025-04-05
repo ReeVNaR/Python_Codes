@@ -8,23 +8,41 @@ class ColorPaletteApp:
     def __init__(self, root):
         self.root = root
         self.root.title("🎨 AI Color Palette Generator")
-        self.root.geometry("640x600")
-        self.root.configure(bg="#f4f4f4")
+        self.root.geometry("720x720")
+        self.root.configure(bg="#ffffff")
 
-        self.title = tk.Label(root, text="Import an image to get its color palette", font=("Helvetica", 16), bg="#f4f4f4")
+        # Title
+        self.title = tk.Label(
+            root, text="🎨 Import an image to extract its color palette",
+            font=("Segoe UI", 18, "bold"), bg="#ffffff", fg="#333333"
+        )
         self.title.pack(pady=20)
 
-        self.import_btn = tk.Button(root, text="📁 Import Image", command=self.import_image, font=("Helvetica", 14), bg="#4287f5", fg="white", padx=20, pady=10)
-        self.import_btn.pack()
+        # Import Button
+        self.import_btn = tk.Button(
+            root, text="📁 Import Image", command=self.import_image,
+            font=("Segoe UI", 14), bg="#0066cc", fg="white",
+            activebackground="#005bb5", activeforeground="white",
+            relief="flat", padx=20, pady=10, cursor="hand2"
+        )
+        self.import_btn.pack(pady=10)
 
-        self.image_label = tk.Label(root, bg="#f4f4f4")
-        self.image_label.pack(pady=20)
+        # Image Preview
+        self.image_label = tk.Label(root, bg="#ffffff")
+        self.image_label.pack(pady=10)
 
-        self.palette_frame = tk.Frame(root, bg="#f4f4f4")
+        # Palette Frame
+        self.palette_frame = tk.Frame(root, bg="#ffffff")
         self.palette_frame.pack(pady=10)
 
-        self.save_btn = tk.Button(root, text="💾 Save Palette as Image", command=self.save_palette, font=("Helvetica", 12), bg="#28a745", fg="white")
-        self.save_btn.pack(pady=10)
+        # Save Button
+        self.save_btn = tk.Button(
+            root, text="💾 Save Palette as Image", command=self.save_palette,
+            font=("Segoe UI", 12), bg="#28a745", fg="white",
+            activebackground="#218838", activeforeground="white",
+            relief="flat", padx=15, pady=8, cursor="hand2"
+        )
+        self.save_btn.pack(pady=20)
 
         self.current_colors = []
 
@@ -37,7 +55,7 @@ class ColorPaletteApp:
             return
 
         img = Image.open(file_path).convert("RGB")
-        img.thumbnail((250, 250))
+        img.thumbnail((300, 300))
         tk_img = ImageTk.PhotoImage(img)
         self.image_label.configure(image=tk_img)
         self.image_label.image = tk_img
@@ -48,7 +66,7 @@ class ColorPaletteApp:
     def get_palette(self, image_path, num_colors=5):
         image = Image.open(image_path).convert("RGB").resize((200, 200))
         data = np.array(image).reshape((-1, 3))
-        kmeans = KMeans(n_clusters=num_colors, random_state=42).fit(data)
+        kmeans = KMeans(n_clusters=num_colors, random_state=42, n_init='auto').fit(data)
         return [tuple(map(int, color)) for color in kmeans.cluster_centers_]
 
     def display_palette(self, colors):
@@ -58,13 +76,21 @@ class ColorPaletteApp:
         for color in colors:
             hex_code = "#{:02x}{:02x}{:02x}".format(*color)
 
-            swatch = tk.Frame(self.palette_frame, bg=hex_code, width=80, height=80, cursor="hand2")
-            swatch.pack(side=tk.LEFT, padx=10)
+            frame = tk.Frame(self.palette_frame, bg="#ffffff")
+            frame.pack(side=tk.LEFT, padx=10)
 
+            swatch = tk.Label(
+                frame, bg=hex_code, width=6, height=3,
+                relief="ridge", bd=2, cursor="hand2"
+            )
+            swatch.pack()
             swatch.bind("<Button-1>", lambda e, code=hex_code: self.copy_to_clipboard(code))
 
-            label = tk.Label(self.palette_frame, text=hex_code, bg="#f4f4f4", font=("Courier", 10))
-            label.pack(side=tk.LEFT, padx=5)
+            label = tk.Label(
+                frame, text=hex_code, font=("Courier New", 10),
+                bg="#ffffff", fg="#333333"
+            )
+            label.pack(pady=5)
 
     def copy_to_clipboard(self, hex_code):
         self.root.clipboard_clear()
@@ -73,7 +99,7 @@ class ColorPaletteApp:
         messagebox.showinfo("Copied!", f"{hex_code} copied to clipboard!")
 
     def save_palette(self):
-        if self.current_colors is None or len(self.current_colors) == 0:
+        if not isinstance(self.current_colors, list) or len(self.current_colors) == 0:
             messagebox.showwarning("No palette", "Please import an image first.")
             return
 
@@ -102,7 +128,7 @@ class ColorPaletteApp:
             img.save(save_path)
             messagebox.showinfo("Saved", f"Palette saved to:\n{save_path}")
 
-# 🚀 Launch App
+# Launch
 if __name__ == "__main__":
     root = tk.Tk()
     app = ColorPaletteApp(root)
