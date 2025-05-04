@@ -12,7 +12,7 @@ def get_meaning(word, dictionary):
 def main():
     # Sample dictionary
     my_dict = {
-        "python": "A high-level programming language.",
+        "python": "A programming language.",
         "dictionary": "A collection of key-value pairs.",
         "algorithm": "A step-by-step procedure to solve a problem.",
         "data": "Facts and statistics collected for reference or analysis.",
