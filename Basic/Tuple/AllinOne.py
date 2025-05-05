@@ -28,5 +28,4 @@ if "banana" in my_tuple:
 nested_tuple = (my_tuple, ("x", "y", "z"))
 print("Nested tuple:", nested_tuple)
 
-# Immutable nature (uncomment to see error)
 
