@@ -20,7 +20,7 @@ for item in my_tuple:
 new_tuple = my_tuple + ("orange", "grape")
 print("Concatenated tuple:", new_tuple)
 
-# Check if item exists
+
 if "banana" in my_tuple:
     print("Yes, 'banana' is in the tuple!")
 
