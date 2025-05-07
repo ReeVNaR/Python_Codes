@@ -1,4 +1,4 @@
-# Create a tuple
+
 my_tuple = ("Ranveer", 21, "India")
 
 
