@@ -11,7 +11,7 @@ print("Sliced tuple (index 1 to 3):", my_tuple[1:4])
 # Tuple length
 print("Length of tuple:", len(my_tuple))
 
-# Iterating through a tuple
+
 print("Items in tuple:")
 for item in my_tuple:
     print(item)
