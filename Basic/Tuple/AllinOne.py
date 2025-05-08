@@ -5,7 +5,7 @@ my_tuple = ("apple", "banana", "cherry", 42, 3.14)
 print("First element:", my_tuple[0])
 print("Last element:", my_tuple[-1])
 
-# Tuple slicing
+
 print("Sliced tuple (index 1 to 3):", my_tuple[1:4])
 
 
