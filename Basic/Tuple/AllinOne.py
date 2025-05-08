@@ -8,7 +8,7 @@ print("Last element:", my_tuple[-1])
 # Tuple slicing
 print("Sliced tuple (index 1 to 3):", my_tuple[1:4])
 
-# Tuple length
+
 print("Length of tuple:", len(my_tuple))
 
 
