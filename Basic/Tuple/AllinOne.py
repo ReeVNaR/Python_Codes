@@ -16,7 +16,6 @@ print("Items in tuple:")
 for item in my_tuple:
     print(item)
 
-# Tuple concatenation
 new_tuple = my_tuple + ("orange", "grape")
 print("Concatenated tuple:", new_tuple)
 
