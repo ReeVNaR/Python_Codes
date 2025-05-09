@@ -24,7 +24,6 @@ print("Concatenated tuple:", new_tuple)
 if "banana" in my_tuple:
     print("Yes, 'banana' is in the tuple!")
 
-# Nested tuple
 nested_tuple = (my_tuple, ("x", "y", "z"))
 print("Nested tuple:", nested_tuple)
 
