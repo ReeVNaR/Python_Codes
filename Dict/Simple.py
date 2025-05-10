@@ -10,7 +10,7 @@ def get_meaning(word, dictionary):
         return "Word not found in dictionary."
 
 def main():
-    # Sample dictionary
+    
     my_dict = {
         "python": "A high-level programming language.",
         "dictionary": "A collection of key-value pairs.",
