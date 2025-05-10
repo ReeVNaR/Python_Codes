@@ -1,4 +1,4 @@
-# Creating a tuple
+
 my_tuple = ("apple", "banana", "cherry", 42, 3.14)
 
 
