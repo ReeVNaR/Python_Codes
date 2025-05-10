@@ -3,7 +3,7 @@ def get_meaning(word, dictionary):
     if word in dictionary:
         return dictionary[word]
     else:
-        # Suggest similar words
+        
         suggestions = [w for w in dictionary if word in w or w in word]
         if suggestions:
             return f"Word not found. Did you mean: {', '.join(suggestions)}?"
