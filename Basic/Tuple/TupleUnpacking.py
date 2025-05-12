@@ -6,7 +6,7 @@ print("Name:", name)
 print("Age:", age)
 print("City:", city)
 
-# Swapping values using tuple
+
 a = 10
 b = 20
 print("\nBefore swapping: a =", a, "b =", b)
