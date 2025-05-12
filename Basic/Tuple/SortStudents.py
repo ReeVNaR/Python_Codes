@@ -1,4 +1,4 @@
-# List of students as (name, marks)
+
 students = [("Ranveer", 88), ("Pratiksha", 92), ("Aarav", 75), ("Sia", 85)]
 
 
