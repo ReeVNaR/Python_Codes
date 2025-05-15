@@ -1,7 +1,7 @@
 # Empty list
 my_list = []
 
-# List with elements
+
 numbers = [1, 2, 3, 4, 5]
 mixed = [16, "hello", 7.9, True]
 
