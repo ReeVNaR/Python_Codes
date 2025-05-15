@@ -1,4 +1,4 @@
-# Empty list
+
 my_list = []
 
 
