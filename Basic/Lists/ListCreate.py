@@ -15,5 +15,5 @@ matrix = [
     [7, 8, 9]
 ]
 
-# Accessing an element
+
 print(matrix[2][2])  # 6
