@@ -1,6 +1,6 @@
 fruits = ["apple", "banana", "cherry"]
 
-# Access by index (0-based indexing)
+
 print(fruits[0])  # apple
 print(fruits[1])  # banana
 
