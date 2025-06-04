@@ -13,7 +13,7 @@ print(fruits[-2])
 fruits[1] = "blueberry"
 print(fruits)  
 
-# Append (adds at end)
+
 fruits.append("mango")  
 
 # Insert at a specific index
