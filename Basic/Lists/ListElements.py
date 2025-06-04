@@ -28,7 +28,7 @@ fruits.remove("cherry")
 
 fruits.pop()  
 
-# Remove by index
+
 del fruits[0]  
 
 print(fruits)  # ['grape', 'blueberry']
