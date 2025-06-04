@@ -16,7 +16,7 @@ print(fruits)
 
 fruits.append("mango")  
 
-# Insert at a specific index
+
 fruits.insert(1, "grape")
 
 print(fruits)  # ['apple', 'grape', 'blueberry', 'cherry', 'mango']
