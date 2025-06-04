@@ -31,4 +31,4 @@ fruits.pop()
 
 del fruits[0]  
 
-print(fruits)  # ['grape', 'blueberry']
+print(fruits)
