@@ -22,7 +22,7 @@ fruits.insert(1, "grape")
 print(fruits)
 
 
-# Remove by value
+
 fruits.remove("cherry")  
 
 # Remove last element
