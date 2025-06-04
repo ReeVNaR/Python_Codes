@@ -19,7 +19,7 @@ fruits.append("mango")
 
 fruits.insert(1, "grape")
 
-print(fruits)  # ['apple', 'grape', 'blueberry', 'cherry', 'mango']
+print(fruits)
 
 
 # Remove by value
