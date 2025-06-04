@@ -11,7 +11,7 @@ print(fruits[-2])
 
 
 fruits[1] = "blueberry"
-print(fruits)  # ['apple', 'blueberry', 'cherry']
+print(fruits)  
 
 # Append (adds at end)
 fruits.append("mango")  
