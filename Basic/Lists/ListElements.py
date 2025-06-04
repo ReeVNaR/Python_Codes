@@ -25,7 +25,7 @@ print(fruits)
 
 fruits.remove("cherry")  
 
-# Remove last element
+
 fruits.pop()  
 
 # Remove by index
