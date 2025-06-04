@@ -6,7 +6,7 @@ print(fruits[1])
 
 
 print(fruits[-1])  
-print(fruits[-2])  # banana
+print(fruits[-2])  
 
 
 
