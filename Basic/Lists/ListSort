@@ -3,7 +3,7 @@ nums = [5, 2, 8, 1, 4]
 nums.sort()  # Sort in ascending order
 print(nums)  # [1, 2, 4, 5, 8]
 
-nums.sort(reverse=True)  # Sort in descending order
+nums.sort(reverse=True) 
 print(nums)  
 
 words = ["banana", "apple", "cherry"]
