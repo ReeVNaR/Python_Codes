@@ -8,4 +8,4 @@ print(nums)  # [8, 5, 4, 2, 1]
 
 words = ["banana", "apple", "cherry"]
 words.sort(key=len)  
-print(words)  # ['apple', 'banana', 'cherry'] (Sorted by length)
+print(words)  
