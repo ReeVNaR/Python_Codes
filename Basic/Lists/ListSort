@@ -1,6 +1,6 @@
 nums = [5, 2, 8, 1, 4]
 
-nums.sort()  # Sort in ascending order
+nums.sort()
 print(nums)  
 
 nums.sort(reverse=True) 
